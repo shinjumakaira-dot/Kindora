@@ -1,0 +1,7 @@
+Senin 	: 950 telur
+Selasa 	: 970 telur
+Rabu 	: 940 telur
+Kamis 	: 960 telur
+Jumat 	: 980 telur
+Sabtu 	: 990 telur
+Minggu 	: 945 telur
