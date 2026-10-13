@@ -6,9 +6,8 @@
 
 ## 📌 Anggota Kelompok & Pembagian Tugas
 
-| Nama | Peran | Tanggung Jawab |
-| **[Rafa Novtria]** | Frontend & UI/UX | Desain mockup, slicing UI (HTML/CSS/JS), antarmuka pengguna |
-| **[Destra Elisya Putri Ambadar]** | Backend & Database | Perancangan Database SQL, Pembuatan API, Logika Bisnis |
+| **[Rafa Novtria]** | Frontend & UI/UX | Desain mockup, slicing UI (HTML/CSS/JS), antarmuka pengguna | <br>
+| **[Destra Elisya Putri Ambadar]** | Backend & Database | Perancangan Database SQL, Pembuatan API, Logika Bisnis | <br>
 | **[Navika Farsabila]** | DevOps & Testing | Git Flow, Deployment, Testing, & Fitur Tambahan |
 
 ---
@@ -22,8 +21,8 @@ Kindora hadir untuk menyelesaikan masalah penumpukan barang layak pakai yang tid
 2. **Katalog Donasi**: Cari dan filter barang donasi berdasarkan kategori
 3. **Detail & Ajukan Barang**: Informasi lengkap barang dan form pengajuan penerima
 4. **Kelola Donasi**: Donatur dapat menambahkan barang dan mengunggah foto
-5. **Tracking Status**: Pelacakan status barang (*Tersedia*, *Dalam proses*, *Sudah didonasikan*)[cite: 3, 6]
-6. **Dashboard Admin**: Verifikasi barang masuk dan manajemen pengguna[cite: 5]
+5. **Tracking Status**: Pelacakan status barang (*Tersedia*, *Dalam proses*, *Sudah didonasikan*)
+6. **Dashboard Admin**: Verifikasi barang masuk dan manajemen pengguna
 
 ---
 
