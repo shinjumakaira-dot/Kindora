@@ -29,12 +29,12 @@ Kindora hadir untuk menyelesaikan masalah penumpukan barang layak pakai yang tid
 ## 🎨 Aset Visual & UI/UX
 
 Panduan desain dan aset proyek dapat diakses pada folder `docs/`:
-- **Logo & Ikon**: `docs/assets/`
+- **Logo & Ikon**: `docs/logo/`
 - **Kode Warna (Palette)**:
   - Primary (Hijau): `#1F5E43`
   - Secondary (Krem): `#F6F4EB`
   - Accent (Oranye): `#E09F51`
-- **Mockup UI/UX**: `docs/mockups/`
+- **Mockup UI/UX**: `docs/mockup/`
 
 ---
 
