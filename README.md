@@ -21,9 +21,8 @@ Kindora hadir untuk menyelesaikan masalah penumpukan barang layak pakai yang tid
 2. **Beranda**: Halaman utama berisi ringkasan donasi terbaru, banner informasi, dan kategori populer.   
 3. **Katalog Donasi**: Tempat melihat seluruh daftar barang donasi yang tersedia (titik awal untuk masuk ke Detail Barang & Form          Pengajuan). 
 4. **Donasi**: Khusus untuk Donatur yang ingin mengunggah barang donasi baru (Tambah Barang Donasi) atau memantau barang yang mereka      donasikan.
-5. **Donasi**: Khusus untuk Donatur yang ingin mengunggah barang donasi baru (Tambah Barang Donasi) atau memantau barang yang mereka     donasikan. 
-6. **Pesan**: Fitur perpesanan/chat antara Donatur dan Penerima setelah pengajuan disetujui.
-7. **Profil**: Informasi akun pengguna serta riwayat "Pengajuan Saya" (untuk memantau status pengajuan yang sudah dikirim).
+5. **Pesan**: Fitur perpesanan/chat antara Donatur dan Penerima setelah pengajuan disetujui.
+6. **Profil**: Informasi akun pengguna serta riwayat "Pengajuan Saya" (untuk memantau status pengajuan yang sudah dikirim).
 
 ---
 
