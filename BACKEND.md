@@ -33,4 +33,4 @@ Rancangan tabel database diletakkan pada file:
 Berikut merupakan rancangan ERD database
 Sistem Donasi Barang Layak Pakai Berbasis Cloud (Kindora).
 
-![ERD Kindora](docs/ERD.png)
+![ERD Kindora](backend/docs/ERD.png)
