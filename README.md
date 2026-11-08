@@ -14,15 +14,15 @@
 
 ## 💡 Deskripsi Proyek
 
-Kindora hadir untuk menyelesaikan masalah penumpukan barang layak pakai yang tidak terpakai dengan menyalurkannya kepada pihak yang membutuhkan. Sistem ini memfasilitasi 3 jenis pengguna: Donatur, Penerima, dan Admin.
+Kindora hadir untuk menyelesaikan masalah penumpukan barang layak pakai yang tidak terpakai dengan menyalurkannya kepada pihak yang membutuhkan. Sistem ini memfasilitasi 2 jenis pengguna: Donatur dan Penerima.
 
 ### ✨ Fitur Utama (MVP)
 1. **Autentikasi**: Register & Login Pengguna
-2. **Katalog Donasi**: Cari dan filter barang donasi berdasarkan kategori
-3. **Detail & Ajukan Barang**: Informasi lengkap barang dan form pengajuan penerima
-4. **Kelola Donasi**: Donatur dapat menambahkan barang dan mengunggah foto
-5. **Tracking Status**: Pelacakan status barang (*Tersedia*, *Dalam proses*, *Sudah didonasikan*)
-6. **Dashboard Admin**: Verifikasi barang masuk dan manajemen pengguna
+2. **Beranda**: Halaman utama berisi ringkasan donasi terbaru, banner informasi, dan kategori populer.   
+3. **Katalog Donasi**: Tempat melihat seluruh daftar barang donasi yang tersedia (titik awal untuk masuk ke Detail Barang & Form          Pengajuan). 
+4. **Donasi**: Khusus untuk Donatur yang ingin mengunggah barang donasi baru (Tambah Barang Donasi) atau memantau barang yang mereka      donasikan.
+5. **Pesan**: Fitur perpesanan/chat antara Donatur dan Penerima setelah pengajuan disetujui.
+6. **Profil**: Informasi akun pengguna serta riwayat "Pengajuan Saya" (untuk memantau status pengajuan yang sudah dikirim).
 
 ---
 
