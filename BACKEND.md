@@ -51,10 +51,10 @@ Wajib login, kirim header Authorization: Bearer <token>:
 
 ## Seeder
 
-Isi data awal kategori dan akun admin dev:
+Isi data awal kategori:
 
 ```bash
 npm run seed
 ```
 
-Isi dulu ADMIN_EMAIL dan ADMIN_PASSWORD di file .env. Kalau ADMIN_PASSWORD kosong, seeder cuma isi kategori dan lewati akun admin. Seeder bisa dijalankan ulang, kategori tidak dobel dan akun admin tidak dibuat dua kali.
+Seeder bisa dijalankan ulang, kategori tidak dobel.
