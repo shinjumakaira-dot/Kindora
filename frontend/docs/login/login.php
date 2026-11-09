@@ -474,6 +474,7 @@
     const passwordGroup = document.getElementById("passwordGroup");
 
     const message = document.getElementById("message");
+    const API_BASE = "http://localhost:3000/api";
     const togglePassword = document.getElementById("togglePassword");
     const eyeIcon = document.getElementById("eyeIcon");
 
@@ -531,7 +532,7 @@
     }
 
     // VALIDASI LOGIN
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async function (event) {
 
         event.preventDefault();
 
@@ -580,19 +581,39 @@
 
         }
 
-        // DEMO SEBELUM INTEGRASI BACKEND
-        message.textContent =
-            "Login berhasil! Mengalihkan ke halaman Beranda...";
+        // KIRIM KE BACKEND ASLI
+        try {
+            const response = await fetch(API_BASE + "/auth/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email: emailValue, password: passwordValue })
+            });
 
-        message.classList.add("show", "success");
+            const result = await response.json();
 
-        // SIMPAN STATUS LOGIN SEMENTARA
-        localStorage.setItem("kindora_login", "true");
+            if (!response.ok) {
+                const detail = result.errors
+                    ? result.errors.map(function (e) { return e.message; }).join(" ")
+                    : result.message;
+                message.textContent = detail || "Login gagal.";
+                message.classList.add("show", "error");
+                return;
+            }
 
-        // ARAHKAN KE HALAMAN DASHBOARD
-        setTimeout(function () {
-            window.location.href = "dashboard.php";
-        }, 1000);
+            localStorage.setItem("kindora_token", result.data.token);
+            localStorage.setItem("kindora_user", JSON.stringify(result.data.user));
+            localStorage.setItem("kindora_login", "true");
+
+            message.textContent = "Login berhasil! Mengalihkan ke halaman Beranda...";
+            message.classList.add("show", "success");
+
+            setTimeout(function () {
+                window.location.href = "dashboard.php";
+            }, 1000);
+        } catch (error) {
+            message.textContent = "Tidak bisa terhubung ke backend. Pastikan server backend jalan di localhost:3000.";
+            message.classList.add("show", "error");
+        }
 
     });
 </script>

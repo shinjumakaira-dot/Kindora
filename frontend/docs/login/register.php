@@ -326,6 +326,7 @@
     const confirmPassword = document.getElementById("confirmPassword");
 
     const message = document.getElementById("message");
+    const API_BASE = "http://localhost:3000/api";
 
     const groups = {
         nama: document.getElementById("nameGroup"),
@@ -370,7 +371,7 @@
     });
 
     // VALIDASI REGISTRASI
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
         Object.values(groups).forEach(group => {
@@ -421,10 +422,32 @@
             return;
         }
 
-        showMessage(
-            "Validasi berhasil. Data belum disimpan karena backend belum tersedia.",
-            "success"
-        );
+        // KIRIM KE BACKEND ASLI
+        try {
+            const response = await fetch(API_BASE + "/auth/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ nama_lengkap: namaValue, email: emailValue, password: passwordValue })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                const detail = result.errors
+                    ? result.errors.map(function (e) { return e.message; }).join(" ")
+                    : result.message;
+                showMessage(detail || "Registrasi gagal.", "error");
+                return;
+            }
+
+            showMessage("Registrasi berhasil. Mengalihkan ke halaman login...", "success");
+
+            setTimeout(function () {
+                window.location.href = "login.php";
+            }, 1000);
+        } catch (error) {
+            showMessage("Tidak bisa terhubung ke backend. Pastikan server backend jalan di localhost:3000.", "error");
+        }
     });
 </script>
 
