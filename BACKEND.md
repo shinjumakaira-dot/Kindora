@@ -34,3 +34,27 @@ Berikut merupakan rancangan ERD database
 Sistem Donasi Barang Layak Pakai Berbasis Cloud (Kindora).
 
 ![ERD Kindora](backend/docs/ERD.png)
+
+## Endpoint API
+
+Publik:
+- GET / - cek API jalan
+- GET /api/health - cek status API
+- POST /api/auth/register - daftar, body: nama_lengkap, email, password
+- POST /api/auth/login - login, body: email, password, balasan: token JWT
+
+Wajib login, kirim header Authorization: Bearer <token>:
+- POST /api/auth/logout - logout, token masuk daftar blokir
+- GET /api/user - profil user yang login
+- PUT /api/user - ubah nama atau email
+- PUT /api/user/password - ganti password, body: password_lama, password_baru
+
+## Seeder
+
+Isi data awal kategori dan akun admin dev:
+
+```bash
+npm run seed
+```
+
+Isi dulu ADMIN_EMAIL dan ADMIN_PASSWORD di file .env. Kalau ADMIN_PASSWORD kosong, seeder cuma isi kategori dan lewati akun admin. Seeder bisa dijalankan ulang, kategori tidak dobel dan akun admin tidak dibuat dua kali.
