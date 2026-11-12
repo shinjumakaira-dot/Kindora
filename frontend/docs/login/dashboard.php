@@ -152,7 +152,7 @@
 
 <main>
     <section class="welcome">
-        <h1>Selamat Datang di Kindora!</h1>
+        <h1 id="welcomeTitle">Selamat Datang di Kindora!</h1>
 
         <p>
             Bersama, kita bisa memberi arti lebih besar.
@@ -185,21 +185,59 @@
 </footer>
 
 <script>
-    // Periksa status login simulasi
-    if (localStorage.getItem("kindora_login") !== "true") {
+    const API_BASE = "http://localhost:3000/api";
+    const token = localStorage.getItem("kindora_token");
+
+    // Periksa token dari backend, bukan cuma flag demo
+    if (!token) {
         window.location.href = "login.php";
+    } else {
+        fetch(API_BASE + "/user", {
+            headers: { "Authorization": "Bearer " + token }
+        }).then(function (response) {
+            if (!response.ok) {
+                throw new Error("Token tidak valid.");
+            }
+            return response.json();
+        }).then(function (result) {
+            const title = document.getElementById("welcomeTitle");
+            if (title && result.data && result.data.nama_lengkap) {
+                title.textContent = "Selamat Datang, " + result.data.nama_lengkap + "!";
+            }
+        }).catch(function () {
+            localStorage.removeItem("kindora_token");
+            localStorage.removeItem("kindora_user");
+            localStorage.removeItem("kindora_login");
+            window.location.href = "login.php";
+        });
     }
 
-    // Fungsi logout
-    function logout() {
+    // Fungsi logout, panggil backend lalu bersihkan sesi
+    async function logout() {
         const konfirmasi = confirm(
             "Apakah Anda yakin ingin keluar?"
         );
 
-        if (konfirmasi) {
-            localStorage.removeItem("kindora_login");
-            window.location.href = "login.php";
+        if (!konfirmasi) {
+            return;
         }
+
+        const savedToken = localStorage.getItem("kindora_token");
+
+        if (savedToken) {
+            try {
+                await fetch(API_BASE + "/auth/logout", {
+                    method: "POST",
+                    headers: { "Authorization": "Bearer " + savedToken }
+                });
+            } catch (error) {
+            }
+        }
+
+        localStorage.removeItem("kindora_token");
+        localStorage.removeItem("kindora_user");
+        localStorage.removeItem("kindora_login");
+        window.location.href = "login.php";
     }
 </script>
 
