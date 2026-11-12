@@ -1,24 +1,45 @@
-name: Automated Code Checker
+name: Kindora PHP Syntax Checker
 
 on:
   push:
-    branches: [ main, dev ]
+    branches: [main, DevOps]
   pull_request:
-    branches: [ main ]
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  check-code:
+  php-lint:
+    name: Check PHP Syntax
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Kode Mahasiswa
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          node-version: 18
+          php-version: '8.3'
 
-      - name: Jalankan Pengecekan
+      - name: Check PHP Syntax
         run: |
-          echo "Bot sedang memeriksa kode mahasiswa..."
-          # Bot akan memastikan repositori tidak kosong
+          set -e
+
+          mapfile -d '' php_files < <(
+            find . -type f -name '*.php' \
+            -not -path './.git/*' \
+            -not -path './vendor/*' \
+            -print0
+          )
+
+          if [ "${#php_files[@]}" -eq 0 ]; then
+            echo "Tidak ada file PHP yang ditemukan."
+            exit 1
+          fi
+
+          for file in "${php_files[@]}"; do
+            echo "Memeriksa: $file"
+            php -l "$file"
+          done
+
+          echo "Semua file PHP lolos pemeriksaan sintaks."

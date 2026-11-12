@@ -18,11 +18,13 @@ Kindora hadir untuk menyelesaikan masalah penumpukan barang layak pakai yang tid
 
 ### ✨ Fitur Utama (MVP)
 1. **Autentikasi**: Register & Login Pengguna
-2. **Katalog Donasi**: Cari dan filter barang donasi berdasarkan kategori
-3. **Detail & Ajukan Barang**: Informasi lengkap barang dan form pengajuan penerima
-4. **Kelola Donasi**: Donatur dapat menambahkan barang dan mengunggah foto
-5. **Tracking Status**: Pelacakan status barang (*Tersedia*, *Dalam proses*, *Sudah didonasikan*)
-6. **Chat dan COD**: Penerima chat donatur kalau barang masih tersedia, lalu COD langsung tanpa persetujuan admin
+2. **Beranda**: Halaman utama berisi ringkasan donasi terbaru, banner informasi, dan kategori populer.
+3. **Katalog Donasi**: Cari dan filter barang donasi berdasarkan kategori
+4. **Detail & Ajukan Barang**: Informasi lengkap barang dan form pengajuan penerima
+5. **Kelola Donasi**: Donatur dapat menambahkan barang dan mengunggah foto
+6. **Tracking Status**: Pelacakan status barang (*Tersedia*, *Dalam proses*, *Sudah didonasikan*)
+7. **Chat dan COD**: Penerima chat donatur kalau barang masih tersedia, lalu COD langsung tanpa persetujuan admin
+8. **Profil**: Informasi akun pengguna serta riwayat "Pengajuan Saya" (untuk memantau status pengajuan yang sudah dikirim).
 
 ---
 

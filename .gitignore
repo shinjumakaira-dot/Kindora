@@ -1,0 +1,10 @@
+# Environment configuration
+.env
+.env.*
+!.env.example
+
+# Dependencies
+/vendor/
+
+# Temporary files
+*.log
