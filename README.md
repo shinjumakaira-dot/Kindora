@@ -6,9 +6,9 @@
 
 ## 📌 Anggota Kelompok & Pembagian Tugas
 
-| **[Rafa Novtria]** | Frontend & UI/UX | Desain mockup, slicing UI (HTML/CSS/JS), antarmuka pengguna | <br>
-| **[Destra Elisya Putri Ambadar]** | Backend & Database | Perancangan Database SQL, Pembuatan API, Logika Bisnis | <br>
-| **[Navika Farsabila]** | DevOps & Testing | Git Flow, Deployment, Testing, & Fitur Tambahan |
+| **[Rafa Novtria]** | Frontend & UI/UX | Desain mockup, slicing UI (HTML/CSS/JS), antarmuka pengguna | <br> novtriarafa-bit (novtriarafa@gmail.com
+| **[Destra Elisya Putri Ambadar]** | Backend & Database | Perancangan Database SQL, Pembuatan API, Logika Bisnis | <br> elisyayaa (elisyadestra@gmail.com)
+| **[Navika Farsabila]** | DevOps & Testing | Git Flow, Deployment, Testing, & Fitur Tambahan | shinjumakaira-dot (shinjumakaira@gmail.com)
 
 ---
 
