@@ -1,0 +1,8 @@
+CREATE TABLE public.token_diblokir (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    token_hash TEXT NOT NULL UNIQUE,
+    expires_at TIMESTAMPTZ NOT NULL
+);
+
+ALTER TABLE public.token_diblokir
+ENABLE ROW LEVEL SECURITY;
