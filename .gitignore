@@ -1,10 +1,11 @@
-# Environment configuration
+# Environment files
 .env
 .env.*
 !.env.example
 
 # Dependencies
-/vendor/
+node_modules/
+vendor/
 
 # Temporary files
 *.log
