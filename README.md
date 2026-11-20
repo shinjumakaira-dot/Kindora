@@ -16,6 +16,9 @@
 
 Kindora hadir untuk menyelesaikan masalah penumpukan barang layak pakai yang tidak terpakai dengan menyalurkannya kepada pihak yang membutuhkan. Sistem ini memfasilitasi 2 jenis pengguna: Donatur dan Penerima, tanpa Admin. Kalau barang masih tersedia, penerima chat donatur lalu COD langsung tanpa persetujuan admin.
 
+## Dokumentasi
+- [User Story Kindora](USER_STORY.md)
+
 ### ✨ Fitur Utama (MVP)
 1. **Autentikasi**: Register & Login Pengguna
 2. **Beranda**: Halaman utama berisi ringkasan donasi terbaru, banner informasi, dan kategori populer.
