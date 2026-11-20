@@ -51,10 +51,6 @@ exports.updateProfile = async (req, res) => {
             updates.email = email;
         }
 
-        if (req.body.nomor_telepon !== undefined) {
-            updates.nomor_telepon = req.body.nomor_telepon.trim() || null;
-        }
-
         if (Object.keys(updates).length === 0) {
             return res.status(400).json({
                 success: false,
